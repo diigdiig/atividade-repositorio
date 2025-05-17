@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfólio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="light-theme">
+<div class="header">
+<h1>BEM VINDO AO MEU PORTFÓLIO</h1>
+<img src="perfil.jpg" alt="perfil-foto" class="profile-img">
+</div>
+<button id="theme-toggle">Alternar Tema</button>
+<div class="menu">
+<a href="#sobre"><h3>Sobre</h3></a>
+<a href="#projetos"><h3>Projetos</h3></a>
+<a href="#habilidades"><h3>Habilidades</h3></a>
+<a href="#contato"><h3>Contato</h3></a>
+</div>
+<div id="sobre">
+<h2>Sobre mim</h2>
+<p>Sou desenvolvedor em aprendizado, querendo aprimorar minhas habilidades em front-end e back-end.</p>
+</div>
+<div id="projetos">
+<h2>Projetos</h2>
+<ul class="projetos">
+<li><a href="https://nickchin1.github.io/Janeiro-Branco/" target="_blank">Projeto 1 - Desafios para Enfrentar a pressão social</a></li>
+<li><a href="https://github.com/diigdiig/divaspops.github.io" target="_blank">Projeto 2 - Divas pop</a></li>
+<li><a href="https://github.com/diigdiig/ATIVIDADE-TESTE" target="_blank">Projeto 3 - Atividade-teste</a></li>
+</ul>
+</div>
+<div id="habilidades">
+<h2>Habilidades</h2>
+<div class="skill">
+<p>HTML</p>
+<div class="bar"><div class="fill html"></div></div>
+</div>
+<div class="skill">
+<p>Python</p>
+<div class="bar"><div class="fill python"></div></div>
+</div>
+<div class="skill">
+<p>JavaScript</p>
+<div class="bar"><div class="fill js"></div></div>
+</div>
+</div>
+<div id="contato">
+<h2>Contato</h2>
+<form id="contact-form">
+<label for="nome">Nome:</label>
+<input type="text" id="nome" name="nome" required>
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
+<label for="mensagem">Mensagem:</label>
+<textarea id="mensagem" name="mensagem" required></textarea>
+<button type="submit">Enviar</button>
+</form>
+<p id="mensagem-sucesso" style="display:none; color:rgb(0,128,68);">Mensagem enviada!</p>
+</div>
+<script>
+const botaoTema=document.getElementById("theme-toggle");const corpo=document.body;botaoTema.addEventListener("click",()=>{corpo.classList.toggle("dark-theme");corpo.classList.toggle("light-theme")});const form=document.getElementById("contact-form");const msgSucesso=document.getElementById("mensagem-sucesso");form.addEventListener("submit",e=>{e.preventDefault();msgSucesso.style.display="block";form.reset();setTimeout(()=>{msgSucesso.style.display="none"},4000)});
+</script>
+</body>
+</html>
